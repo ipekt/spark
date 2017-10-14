@@ -13,16 +13,16 @@ class App extends Component {
     this.state = {
       entries: []
     };
-    this.onFetchEntriesSuccess = this.onFetchEntriesSuccess.bind(this);
   }
 
   componentDidMount() {
     fetchEntries(1, this.onFetchEntriesSuccess);
   }
 
-  onFetchEntriesSuccess(entries) {
+  onFetchEntriesSuccess = (entries) => {
+    console.log(entries)
    this.setState({ entries: entries });
-  }
+  };
 
   render() {
     return (
@@ -40,10 +40,9 @@ class App extends Component {
           </div>
 
           <div className={ styles.sparkApp__sections }>
-            <Progress/>
+            <Progress entries={this.state.entries}/>
           </div>
         </div>
-        <Calender entries={this.state.entries}/>
       </div>
     );
   }

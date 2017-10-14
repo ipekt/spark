@@ -11,5 +11,6 @@ export const fetchEntries = (id, onSuccess) => {
     result.forEach(v => {
       arr.push(v.val())
     });
+    onSuccess(arr);
   })
 };
