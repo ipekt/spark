@@ -1,36 +1,31 @@
 {
-  "1": [
-    {
-      "date": "2017-10-10T00:00:00Z",
+  "1": {
+    "2017-10-10": {
       "completed": true,
       "word": "Spock",
       "quote": "possimus provident quasi quia"
     },
-    {
-      "date": "2017-10-11T00:00:00Z",
+    "2017-10-11": {
       "completed": true,
       "word": "Belana",
       "quote": "sapiente suscipit tenetur voluptas!"
     },
-    {
-      "date": "2017-10-12T00:00:00Z",
-      "completed": true,
+    "2017-10-12": {
+      "completed": false,
       "word": "Janeway",
       "quote": "eius est exercitationem illo "
     },
-    {
-      "date": "2017-10-13T00:00:00Z",
-      "completed": true,
+    "2017-10-13": {
+      "completed": false,
       "word": "Kirk",
       "quote": "Ab adipisci consectetur consequuntur"
     },
-    {
-      "date": "2017-10-14T00:00:00Z",
+    "2017-10-14": {
       "completed": true,
       "word": "Tom",
       "quote": "Lorem ipsum dolor sit amet"
     }
-  ]
+  }
 }
 
 

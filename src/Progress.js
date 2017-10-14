@@ -2,12 +2,11 @@ import React from 'react';
 import Calender from './Calender';
 import Checkbox from './Checkbox';
 
-const Progress = ({entries}) => (
+const Progress = ({entries, onChange, isChecked}) => (
 
     <div>
-      {console.log(entries)}
       <Calender entries={entries}/>
-      <Checkbox/>
+      <Checkbox onChange={onChange} isChecked={isChecked}/>
     </div>
 );
 

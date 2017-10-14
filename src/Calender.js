@@ -6,11 +6,12 @@ import * as moment from 'moment';
 import 'react-dates/lib/css/_datepicker.css';
 
 const Calender = ({entries}) => {
-  const dates = {};
-  entries.forEach(e => dates[moment(e.date).format("YYYY-MM-DD")] = e.completed);
 
   const highlightFunc = (day1) => {
-    return  dates[day1.format("YYYY-MM-DD")];
+    const entry = entries[day1.format("YYYY-MM-DD")];
+     if (entry) {
+       return entry.completed;
+     }
   };
 
   return (

@@ -1,16 +1,23 @@
 import * as firebase from 'firebase';
+import * as moment from 'moment';
 // fetch all entries by user id
 
 export const fetchEntries = (id, onSuccess) => {
+  let obj = {};
   return firebase.database()
   .ref('/entries/' + id)
-  .orderByChild('date')
   .once('value')
   .then(result => {
-    const arr = [];
-    result.forEach(v => {
-      arr.push(v.val())
-    });
-    onSuccess(arr);
+    onSuccess(result.val());
   })
 };
+
+export const updateCompleted = (id, completed) => {
+  console.log("completed", completed)
+  const today = new moment().format("YYYY-MM-DD");
+  const userEntryRef = firebase.database().ref('/entries/' + id + "/" + today);
+
+   userEntryRef.child('completed').set(completed);
+
+};
+2

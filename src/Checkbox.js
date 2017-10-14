@@ -1,11 +1,34 @@
 import React from 'react';
 import styles from './App.scss';
+import {updateCompleted} from './effects';
 
 class Checkbox extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      checked: props.isChecked
+    };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({checked: nextProps.isChecked})
+  }
+
+
+  onChange = (e) => {
+    this.props.onChange(!this.state.checked)
+    this.setState({checked: !this.state.checked});
+  };
   render () {
     return (
       <div>
-        <input className={ styles.sparkApp__checkbox } type="checkbox" id="checkbox" name="subscribe" value="newsletter" />
+        <input
+            className={ styles.sparkApp__checkbox }
+            type="checkbox"
+            id="checkbox"
+            checked={this.state.checked}
+            onChange={this.onChange} />
         <label htmlFor="checkbox">Checkbox label</label>
       </div>
     )

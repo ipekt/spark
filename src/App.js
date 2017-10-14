@@ -4,15 +4,17 @@ import Header from './Header';
 import Prompts from './Prompts';
 import Progress from './Progress';
 import { fetchEntries } from './effects';
-import Calender from "./Calender";
+import * as moment from 'moment';
+import {updateCompleted} from './effects';
 
 class App extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      entries: []
-    };
+      entries: null,
+      today:  new moment().format("YYYY-MM-DD")
+    }
   }
 
   componentDidMount() {
@@ -20,11 +22,19 @@ class App extends Component {
   }
 
   onFetchEntriesSuccess = (entries) => {
-    console.log(entries)
    this.setState({ entries: entries });
   };
 
+  updateCompleted = (checked) => {
+    this.state.entries[this.state.today].completed = checked;
+    this.forceUpdate();
+    updateCompleted(1, checked);
+  }
+
   render() {
+    // const today = new moment().format("YYYY-MM-DD");
+    const isChecked = this.state.entries && this.state.entries[this.state.today].completed;
+
     return (
       <div className={ styles.sparkApp }>
 
@@ -39,7 +49,7 @@ class App extends Component {
           </div>
 
           <div className={ styles.sparkApp__sections }>
-            <Progress entries={this.state.entries}/>
+            <Progress entries={this.state.entries || {}} onChange={this.updateCompleted} isChecked={isChecked} />
           </div>
         </div>
       </div>
