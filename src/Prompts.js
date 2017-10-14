@@ -13,7 +13,7 @@ class Prompts extends React.Component {
 
         <div className={ styles.sparkApp__promptsContainer }>
           <Label text="Word"/>
-          <Word/>
+          <Word word={this.props.word} />
         </div>
 
         <div className={ styles.sparkApp__promptsContainer }>

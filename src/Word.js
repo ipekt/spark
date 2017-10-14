@@ -5,7 +5,7 @@ class Word extends React.Component {
   render () {
     return (
       <div>
-        <div className={ styles.sparkApp__word }>SHOCKING</div>
+        <div className={ styles.sparkApp__word }>{this.props.word.toUpperCase()}</div>
       </div>
     )
   }

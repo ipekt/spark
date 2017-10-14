@@ -7,14 +7,46 @@ import { fetchEntries } from './effects';
 import * as moment from 'moment';
 import {updateCompleted} from './effects';
 
+const words = [
+  'shocking',
+  'serendipity',
+  'luminescence',
+  'ethereal',
+  'ambient',
+  'inquisitive',
+  'iridescent',
+  'epiphany',
+  'solitude',
+  'aurora',
+  'oblivion',
+  'atonement',
+  'eloquence',
+  'sonder',
+  'effervescence',
+  'pure',
+  'ineffable',
+  'hiraeth',
+  'nefarious',
+  'epoch',
+  'sonorous',
+  'limerence',
+  'illicit',
+  'petrichor',
+  'supine',
+  'togetherness',
+  'voyage',
+  'universal',
+];
+
 class App extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
       entries: null,
-      today:  new moment().format("YYYY-MM-DD")
-    }
+      today:  new moment().format("YYYY-MM-DD"),
+      word: words[Math.floor(Math.random() * words.length)],
+    };
   }
 
   componentDidMount() {
@@ -45,7 +77,7 @@ class App extends Component {
 
         <div  className={ styles.sparkApp__body }>
           <div className={ styles.sparkApp__sections }>
-            <Prompts/>
+            <Prompts word={this.state.word}/>
           </div>
 
           <div className={ styles.sparkApp__sections }>
