@@ -4,11 +4,24 @@ import Header from './Header';
 import Prompts from './Prompts';
 import Progress from './Progress';
 import { fetchEntries } from './effects';
+import Calender from "./Calender";
 
 class App extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      entries: []
+    };
+    this.onFetchEntriesSuccess = this.onFetchEntriesSuccess.bind(this);
+  }
+
   componentDidMount() {
-    fetchEntries(1);
+    fetchEntries(1, this.onFetchEntriesSuccess);
+  }
+
+  onFetchEntriesSuccess(entries) {
+   this.setState({ entries: entries });
   }
 
   render() {
@@ -30,6 +43,7 @@ class App extends Component {
             <Progress/>
           </div>
         </div>
+        <Calender entries={this.state.entries}/>
       </div>
     );
   }

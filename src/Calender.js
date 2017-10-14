@@ -1,13 +1,17 @@
 import React from 'react';
 
-class Calender extends React.Component {
-  render () {
+const Calender = ({ entries }) => {
+
+
+
     return (
       <div>
-        The Calender
+        {/*{ console.log(entries.map(e => e.date))}*/}
+        <div>Calender</div>
       </div>
     )
-  }
 }
 
 export default Calender;
+
+

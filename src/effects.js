@@ -1,7 +1,15 @@
 import * as firebase from 'firebase';
 // fetch all entries by user id
 
-export const fetchEntries = (id) => {
-  firebase.database().ref('/entries').orderByChild('userId').once('value')  //.equalTo('1', 'userId')
-  .then(result => console.log(result.val() ));
+export const fetchEntries = (id, onSuccess) => {
+  return firebase.database()
+  .ref('/entries/' + id)
+  .orderByChild('date')
+  .once('value')
+  .then(result => {
+    const arr = [];
+    result.forEach(v => {
+      arr.push(v.val())
+    });
+  })
 };
