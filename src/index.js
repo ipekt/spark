@@ -8,5 +8,6 @@ import config from './firebase-config';
 
 firebase.initializeApp(config);
 
+
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
