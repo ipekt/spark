@@ -22,14 +22,14 @@ class Checkbox extends React.Component {
   };
   render () {
     return (
-      <div>
+      <div className={ styles.sparkApp__checkboxContainer }>
         <input
             className={ styles.sparkApp__checkbox }
             type="checkbox"
             id="checkbox"
             checked={this.state.checked}
             onChange={this.onChange} />
-        <label htmlFor="checkbox">Checkbox label</label>
+        <label htmlFor="checkbox">Checkbox label</label>        <label className={ styles.sparkApp__checkboxLabel} htmlFor="checkbox">I was creative today</label>
       </div>
     )
   }

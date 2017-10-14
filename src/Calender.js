@@ -2,8 +2,8 @@ import React from 'react';
 import 'react-dates/initialize';
 import {DayPickerSingleDateController} from 'react-dates';
 import * as moment from 'moment';
-
 import 'react-dates/lib/css/_datepicker.css';
+import './Calender.css';
 
 const Calender = ({entries}) => {
 
@@ -16,11 +16,9 @@ const Calender = ({entries}) => {
 
   return (
       <div>
-        <DayPickerSingleDateController isDayHighlighted={highlightFunc} />
+        <DayPickerSingleDateController isDayHighlighted={highlightFunc} hideKeyboardShortcutsPanel={true} />
       </div>
   )
 };
 
 export default Calender;
-
-

@@ -2,9 +2,11 @@
 // Spark App
 // =============================================================================
 
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:600,700');
 
-$font-stack: 'Source Sans Pro', sans-serif;
+
+$font-stack: 'Open Sans', sans-serif;
+$font-stack-poppins: 'Poppins', sans-serif;
 $font-thin: 300;
 $font-bold: 400;
 $primary-text: #1B1B19;
@@ -34,6 +36,10 @@ $border: #979797;
   }
 }
 
+.sparkApp__header {
+  text-align: center;
+}
+
 .sparkApp__header,
 .sparkApp__prompts,
 .sparkApp__progress {
@@ -43,8 +49,30 @@ $border: #979797;
   justify-content: center;
 }
 
+.sparkApp__promptsContainer {
+  margin-bottom: 1em;
+}
+
+.sparkApp__prompts {
+  text-align: center;
+}
+
 .sparkApp__sections {
+  padding: 1em;
+
+  @media only screen and (min-width: 642px) {
   padding: 3em;
+  }
+}
+
+.sparkApp__sections__borderRight {
+  border: none;
+  padding: 0;
+
+  @media only screen and (min-width: 642px) {
+    border-right: 1px dashed $border;
+    padding-right: 4em;
+  }
 }
 
 
@@ -59,52 +87,68 @@ $border: #979797;
 
 .sparkApp__date {
   font-weight: $font-bold;
+  text-transform: uppercase;
+  font-family: $font-stack-poppins;
+}
+
+.sparkApp__date,
+.sparkApp__checkboxLabel {
   font-size: .8em;
   letter-spacing: 4px;
-  text-transform: uppercase;
+  font-family: $font-stack-poppins;
 }
 
 
 .sparkApp__quote {
   font-weight: $font-bold;
   font-size: 1.2em;
+  letter-spacing: 2px;
 }
 
 
 .sparkApp__word {
   font-size: 4em;
   $font-thin: 300;
+  letter-spacing: 4px;
+  font-family: $font-stack-poppins;
 }
 
 
 .sparkApp__color {
-  height: 180px;
-  width: 180px;
+  height: 160px;
+  width: 160px;
   border-radius: 50%;
   background-color: #FF1744;
 
   @media only screen and (min-width: 642px) {
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
   }
 }
 
-
 .sparkApp__progress {
-
+  text-align: center;
 }
 
 .sparkApp__label {
   font-size: 1em;
   letter-spacing: 4px;
   text-transform: uppercase;
+  font-family: $font-stack-poppins;
 }
 
+.sparkApp__checkboxContainer {
+  margin-bottom: 1em;
 
+  @media only screen and (min-width: 642px) {
+    margin-bottom: 4em;
+  }
+}
 
+// NOTE: To be replaced / Temp style from: https://codepen.io/Vestride/pen/dABHx?q=checkbox&limit=all&type=type-pens
 .sparkApp__checkbox {
-  position: absolute; // take it out of document flow
-   opacity: 0; // hide it
+  position: absolute;
+  opacity: 0;
 
    & + label {
      position: relative;
@@ -112,51 +156,44 @@ $border: #979797;
      padding: 0;
    }
 
-   // Box.
    & + label:before {
      content: '';
      margin-right: 10px;
      display: inline-block;
-     vertical-align: text-top;
-     width: 20px;
-     height: 20px;
+     vertical-align: -webkit-baseline-middle;
+     width: 32px;
+     height: 32px;
      background: white;
      border: 1px solid #ececec;
    }
 
-   // Box hover
    &:hover + label:before {
      background: #FDD835;
    }
 
-   // Box focus
    &:focus + label:before {
-     box-shadow: 0 0 0 3px rgba(253, 216, 53, 0.12) ;
+     box-shadow: 0 0 0 3px rgba(253, 216, 53, 0.12);
    }
 
-   // Box checked
    &:checked + label:before {
-     background: #f35429;
+     background: rgb(253, 216, 53);
    }
 
-   // Disabled state label.
    &:disabled + label {
      color: #b8b8b8;
      cursor: auto;
    }
 
-   // Disabled box.
    &:disabled + label:before {
      box-shadow: none;
      background: #ddd;
    }
 
-   // Checkmark. Could be replaced with an image
    &:checked + label:after {
      content: '';
      position: absolute;
-     left: 5px;
-     top: 9px;
+     left: 12px;
+     top: 12px;
      background: white;
      width: 2px;
      height: 2px;
@@ -169,4 +206,19 @@ $border: #979797;
        4px -8px 0 white;
      transform: rotate(45deg);
    }
+}
+
+
+
+// Calender
+
+DayPicker DayPicker_1 DayPicker__horizontal DayPicker__horizontal_2 {
+
+}
+
+
+
+.CalendarMonth_caption {
+  font-size: 1.2em;
+  font-weight: $font-thin;
 }

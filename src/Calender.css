@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:600,700');
+
+.CalendarDay__highlighted_calendar {
+  background: #FDD835;
+  color: #186A3B;
+}
+
+.CalendarDay__highlighted_calendar:hover {
+  background: #FDD835;
+  color: #186A3B;
+}
+
+.CalendarDay__highlighted_calendar:active {
+  background: #FDD835;
+  color: #186A3B;
+}
+
+.DayPickerKeyboardShortcuts_show__bottomRight {
+  border-right-color: #FDD835;
+}
+
+.DayPickerKeyboardShortcuts_show__bottomRight:hover {
+  border-right-color: #FDD835;
+}
+
+.CalendarMonth_caption {
+  font-family: 'Poppins', sans-serif; 
+  letter-spacing: 2px;
+}
+
+.DayPickerNavigation_button__horizontal {
+  border-radius: 50%;
+  padding: 8px;
+  background-color: #FDD835;
+  border: 0;
+}
+
+.DayPickerNavigation_button__horizontal:border {
+  border: 0;
+}
+
+.DayPicker {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  padding: .4em;
+}
