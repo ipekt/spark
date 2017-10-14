@@ -6,8 +6,8 @@ import Checkbox from './Checkbox';
 const Progress = ({entries, onChange, isChecked}) => (
 
     <div className={ styles.sparkApp__progress }>
-      <Calender entries={entries}/>
       <Checkbox onChange={onChange} isChecked={isChecked}/>
+      <Calender entries={entries}/>
     </div>
 );
 

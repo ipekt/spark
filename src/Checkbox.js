@@ -29,7 +29,7 @@ class Checkbox extends React.Component {
             id="checkbox"
             checked={this.state.checked}
             onChange={this.onChange} />
-        <label htmlFor="checkbox">Checkbox label</label>        <label className={ styles.sparkApp__checkboxLabel} htmlFor="checkbox">I was creative today</label>
+        <label className={ styles.sparkApp__checkboxLabel} htmlFor="checkbox">I was creative today</label>
       </div>
     )
   }
