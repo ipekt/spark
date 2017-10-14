@@ -1,28 +1,70 @@
-.App {
-  text-align: center;
+// =============================================================================
+// Spark App
+// =============================================================================
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+
+.sparkApp {
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
 }
 
-.logo {
-  animation: logo-spin infinite 20s linear;
-  height: 80px;
+.sparkApp__body {
+  display: flex;
 }
 
-.header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+
+.sparkApp__sections {
+  padding: 2em;
 }
 
-.title {
-  font-size: 1.5em;
+
+.sparkApp__header {
+
 }
 
-.intro {
-  font-size: large;
+
+.sparkApp__logo {
+  padding-bottom: 2em;
 }
 
-@keyframes logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.sparkApp__date {
+
+}
+
+
+.sparkApp__quote {
+
+}
+
+
+
+.sparkApp__header,
+.sparkApp__prompts,
+.sparkApp__progress {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+.sparkApp__label {
+
+}
+
+
+
+
+
+
+.sparkApp__progress {
+
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.scss';
+import styles from './App.scss';
 import Header from './Header';
 import Prompts from './Prompts';
 import Progress from './Progress';
@@ -13,10 +13,23 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Header/>
-        <Prompts/>
-        <Progress/>
+      <div className={ styles.sparkApp }>
+
+        <div className={ styles.sparkApp__sections }>
+          <Header/>
+        </div>
+
+        <hr/>
+
+        <div  className={ styles.sparkApp__body }>
+          <div className={ styles.sparkApp__sections }>
+            <Prompts/>
+          </div>
+
+          <div className={ styles.sparkApp__sections }>
+            <Progress/>
+          </div>
+        </div>
       </div>
     );
   }

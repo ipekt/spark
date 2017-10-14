@@ -4,7 +4,7 @@ class Color extends React.Component {
   render () {
     return (
       <div>
-        <h1>Lorem ipsum Solor Di amet - Someguy</h1>
+        <p>Lorem ipsum Solor Di amet - Someguy</p>
       </div>
     )
   }
