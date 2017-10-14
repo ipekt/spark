@@ -1,10 +1,11 @@
 import React from 'react';
+import styles from './App.scss';
 
 class Date extends React.Component {
   render () {
     return (
       <div>
-        <p>SATURDAY 14 OCTOBER 2017</p>
+        <p className={ styles.sparkApp__date }>Saturday 14 October 2017</p>
       </div>
     )
   }

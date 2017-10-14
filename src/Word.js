@@ -1,10 +1,11 @@
 import React from 'react';
+import styles from './App.scss';
 
 class Word extends React.Component {
   render () {
     return (
       <div>
-        <h1>WORD</h1>
+        <div className={ styles.sparkApp__word }>SHOCKING</div>
       </div>
     )
   }

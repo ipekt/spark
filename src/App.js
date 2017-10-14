@@ -32,7 +32,6 @@ class App extends Component {
           <Header/>
         </div>
 
-        <hr/>
 
         <div  className={ styles.sparkApp__body }>
           <div className={ styles.sparkApp__sections }>

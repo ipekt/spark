@@ -6,7 +6,7 @@ class Logo extends React.Component {
     return (
       <div className={ styles.sparkApp__logo }>
         <svg width="124" height="123" viewBox="0 0 164 163" xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" fill-rule="evenodd">
+          <g fill="none" fillRule="evenodd">
             <g fill="#FDD835">
               <path d="M136.24 27.26l-4.994 15.6-10.607-10.606zM28.76 134.74l4.994-15.6 10.607 10.606z"/>
             </g>
@@ -20,7 +20,7 @@ class Logo extends React.Component {
               <path d="M82 0l10 20.034H72zM82 163l-10-20.034h20z"/>
             </g>
             <circle fill="#FDD835" cx="82" cy="82" r="50"/>
-            <text font-family="Avenir-Black, Avenir" font-size="30" font-weight="700" fill="#000">
+            <text fontFamily="Avenir-Black, Avenir" fontSize="30" fontWeight="700" fill="#000">
               <tspan x="42.105" y="89">spark</tspan>
             </text>
           </g>

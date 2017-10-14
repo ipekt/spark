@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './App.scss';
 
 class Label extends React.Component {
   render () {
     return (
-      <p>{ this.props.text }</p>
+      <p className={ styles.sparkApp__label }>{ this.props.text }</p>
     )
   }
 }
