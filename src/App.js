@@ -65,7 +65,7 @@ class App extends Component {
 
   render() {
     // const today = new moment().format("YYYY-MM-DD");
-    const isChecked = this.state.entries && this.state.entries[this.state.today].completed;
+    const isChecked = this.state.entries && this.state.entries[this.state.today] && this.state.entries[this.state.today].completed;
 
     return (
       <div className={ styles.sparkApp }>
